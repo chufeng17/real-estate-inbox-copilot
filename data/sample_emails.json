@@ -1,0 +1,192 @@
+{
+  "emails": [
+    {
+      "thread_id": "t001",
+      "message_id": "t001_m001",
+      "from": "sophia.wong@example.com",
+      "to": ["alex.chan@remaxmetrohomes.com"],
+      "cc": [],
+      "subject": "Inquiry about 22 Elm Street",
+      "sent_at": "2024-01-05T14:32:00Z",
+      "body_text": "Hi Alex, I'm interested in 22 Elm Street. Is it still available? Would love more details.",
+      "labels": ["INBOX"],
+      "direction": "INCOMING",
+      "contact_email": "sophia.wong@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t001",
+      "message_id": "t001_m002",
+      "from": "alex.chan@remaxmetrohomes.com",
+      "to": ["sophia.wong@example.com"],
+      "cc": [],
+      "subject": "Re: Inquiry about 22 Elm Street",
+      "sent_at": "2024-01-05T16:00:00Z",
+      "body_text": "Hi Sophia, yes it’s still available. I can send you the full property packet. Do you have time for a viewing this week?",
+      "labels": ["SENT"],
+      "direction": "OUTGOING",
+      "contact_email": "sophia.wong@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t001",
+      "message_id": "t001_m003",
+      "from": "sophia.wong@example.com",
+      "to": ["alex.chan@remaxmetrohomes.com"],
+      "subject": "Re: Inquiry about 22 Elm Street",
+      "sent_at": "2024-01-06T09:22:00Z",
+      "body_text": "Yes please send the documents. I'm free Thursday afternoon for a viewing.",
+      "labels": ["INBOX"],
+      "direction": "INCOMING",
+      "contact_email": "sophia.wong@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+
+    {
+      "thread_id": "t002",
+      "message_id": "t002_m001",
+      "from": "david.choi@example.com",
+      "to": ["alex.chan@remaxmetrohomes.com"],
+      "subject": "Pre-approval uploaded",
+      "sent_at": "2024-03-10T11:00:00Z",
+      "body_text": "Hey Alex — got the pre-approval from my lender. Attached is the PDF. What’s next?",
+      "labels": ["INBOX"],
+      "direction": "INCOMING",
+      "contact_email": "david.choi@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t002",
+      "message_id": "t002_m002",
+      "from": "alex.chan@remaxmetrohomes.com",
+      "to": ["david.choi@example.com"],
+      "subject": "Re: Pre-approval uploaded",
+      "sent_at": "2024-03-10T12:30:00Z",
+      "body_text": "Great David! Next step is to schedule showings. I’ll prepare comparables today.",
+      "labels": ["SENT"],
+      "direction": "OUTGOING",
+      "contact_email": "david.choi@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t002",
+      "message_id": "t002_m003",
+      "from": "alex.chan@remaxmetrohomes.com",
+      "to": ["david.choi@example.com"],
+      "subject": "Comparables ready",
+      "sent_at": "2024-03-10T18:05:00Z",
+      "body_text": "Hi David, attached are the comparables we discussed. Let me know which homes you'd like to tour.",
+      "labels": ["SENT"],
+      "direction": "OUTGOING",
+      "contact_email": "david.choi@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+
+    {
+      "thread_id": "t003",
+      "message_id": "t003_m001",
+      "from": "maria.garcia@example.com",
+      "to": ["alex.chan@remaxmetrohomes.com"],
+      "subject": "Offer paperwork confusion",
+      "sent_at": "2024-06-02T08:15:00Z",
+      "body_text": "Alex I’m confused about page 4 of the offer doc. Can we go over it? I think I'm missing something.",
+      "labels": ["INBOX"],
+      "direction": "INCOMING",
+      "contact_email": "maria.garcia@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t003",
+      "message_id": "t003_m002",
+      "from": "alex.chan@remaxmetrohomes.com",
+      "to": ["maria.garcia@example.com"],
+      "subject": "Re: Offer paperwork confusion",
+      "sent_at": "2024-06-02T09:00:00Z",
+      "body_text": "No problem Maria, I can walk you through it. Are you free at 12pm?",
+      "labels": ["SENT"],
+      "direction": "OUTGOING",
+      "contact_email": "maria.garcia@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t003",
+      "message_id": "t003_m003",
+      "from": "maria.garcia@example.com",
+      "to": ["alex.chan@remaxmetrohomes.com"],
+      "subject": "Re: Offer paperwork confusion",
+      "sent_at": "2024-06-02T12:20:00Z",
+      "body_text": "Thanks, that helped a lot. I think everything's clear now!",
+      "labels": ["INBOX"],
+      "direction": "INCOMING",
+      "contact_email": "maria.garcia@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+
+    {
+      "thread_id": "t004",
+      "message_id": "t004_m001",
+      "from": "li.wei@example.com",
+      "to": ["alex.chan@remaxmetrohomes.com"],
+      "subject": "Inspection results are in",
+      "sent_at": "2024-09-14T16:40:00Z",
+      "body_text": "Alex the inspector sent the doc. Some issues… worried about the HVAC. What do you think?",
+      "labels": ["INBOX"],
+      "direction": "INCOMING",
+      "contact_email": "li.wei@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t004",
+      "message_id": "t004_m002",
+      "from": "alex.chan@remaxmetrohomes.com",
+      "to": ["li.wei@example.com"],
+      "subject": "Re: Inspection results are in",
+      "sent_at": "2024-09-14T17:10:00Z",
+      "body_text": "Thanks for sending. I recommend we request a seller credit. I’ll draft the repair request.",
+      "labels": ["SENT"],
+      "direction": "OUTGOING",
+      "contact_email": "li.wei@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t004",
+      "message_id": "t004_m003",
+      "from": "alex.chan@remaxmetrohomes.com",
+      "to": ["li.wei@example.com"],
+      "subject": "Repair request sent",
+      "sent_at": "2024-09-15T10:00:00Z",
+      "body_text": "Hi Li, I’ve submitted the repair request to the seller’s agent.",
+      "labels": ["SENT"],
+      "direction": "OUTGOING",
+      "contact_email": "li.wei@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+
+    {
+      "thread_id": "t005",
+      "message_id": "t005_m001",
+      "from": "jason.nguyen@example.com",
+      "to": ["alex.chan@remaxmetrohomes.com"],
+      "subject": "Just checking in",
+      "sent_at": "2025-02-01T09:15:00Z",
+      "body_text": "Hey Alex, been a while. We’re casually looking again this spring. Any new listings we should see?",
+      "labels": ["INBOX"],
+      "direction": "INCOMING",
+      "contact_email": "jason.nguyen@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    },
+    {
+      "thread_id": "t005",
+      "message_id": "t005_m002",
+      "from": "alex.chan@remaxmetrohomes.com",
+      "to": ["jason.nguyen@example.com"],
+      "subject": "Re: Just checking in",
+      "sent_at": "2025-02-01T10:00:00Z",
+      "body_text": "Welcome back Jason! I’ll pull some options. Let me know your updated budget and areas.",
+      "labels": ["SENT"],
+      "direction": "OUTGOING",
+      "contact_email": "jason.nguyen@example.com",
+      "agent_email": "alex.chan@remaxmetrohomes.com"
+    }
+  ]
+}

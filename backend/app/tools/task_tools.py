@@ -37,13 +37,18 @@ def upsert_task_tool(task_data: Dict[str, Any], agent_user_id: int) -> int:
     db = get_db_session()
     try:
         # Check if task exists (e.g. by title + contact + type, or if ID provided)
-        # For simplicity, we'll assume we are creating new tasks or updating by ID if provided
         task_id = task_data.get("id")
         
         if task_id:
             task = db.query(models.Task).filter(models.Task.id == task_id).first()
         else:
-            task = None
+            # Try to find existing task by title and contact to avoid duplicates
+            # We use a loose match on title or exact match on type + contact if title is similar
+            task = db.query(models.Task).filter(
+                models.Task.contact_id == task_data.get("contact_id"),
+                models.Task.title == task_data.get("title"),
+                models.Task.task_type == task_data.get("task_type")
+            ).first()
             
         if not task:
             task = models.Task(
@@ -63,7 +68,8 @@ def upsert_task_tool(task_data: Dict[str, Any], agent_user_id: int) -> int:
             # Update fields
             if "status" in task_data: task.status = task_data["status"]
             if "due_date" in task_data: task.due_date = task_data["due_date"]
-            # ... other fields
+            if "priority" in task_data: task.priority = task_data["priority"]
+            if "detailed_description" in task_data: task.detailed_description = task_data["detailed_description"]
             
         db.commit()
         db.refresh(task)

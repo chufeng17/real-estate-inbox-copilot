@@ -22,7 +22,10 @@ def read_tasks(
     """
     Retrieve tasks with filtering.
     """
-    query = db.query(models.Task).filter(models.Task.agent_id == current_user.id)
+    # Join with contacts to get contact information
+    query = db.query(models.Task).outerjoin(
+        models.Contact, models.Task.contact_id == models.Contact.id
+    ).filter(models.Task.agent_id == current_user.id)
     
     if status:
         query = query.filter(models.Task.status == status)
@@ -33,13 +36,18 @@ def read_tasks(
     
     tasks = query.offset(skip).limit(limit).all()
     
-    # Compute overdue flag dynamically for response
+    # Compute overdue flag and populate contact info dynamically for response
     now = datetime.utcnow()
     for task in tasks:
         if task.due_date and task.status != models.TaskStatus.DONE and task.due_date < now:
             task.overdue = True
         else:
             task.overdue = False
+        
+        # Populate contact info if contact exists
+        if task.contact:
+            task.contact_name = task.contact.name
+            task.contact_email = task.contact.email
             
     if overdue is not None:
         tasks = [t for t in tasks if t.overdue == overdue]
@@ -68,6 +76,11 @@ def read_task(
         task.overdue = True
     else:
         task.overdue = False
+    
+    # Populate contact info if contact exists
+    if task.contact:
+        task.contact_name = task.contact.name
+        task.contact_email = task.contact.email
         
     return task
 
@@ -110,5 +123,10 @@ def update_task(
         task.overdue = True
     else:
         task.overdue = False
+    
+    # Populate contact info if contact exists
+    if task.contact:
+        task.contact_name = task.contact.name
+        task.contact_email = task.contact.email
         
     return task

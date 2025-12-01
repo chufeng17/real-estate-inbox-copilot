@@ -48,6 +48,11 @@ def reset_demo(
         
         db.commit()
         
+        # Clear ADK Memory (in-memory, so we'll note it in the response)
+        # Note: InMemoryMemoryService doesn't have a clear method, but
+        # since it's in-memory, it will reset on server restart
+        memory_note = "ADK Memory will be cleared on server restart (in-memory store)"
+        
         return {
             "success": True,
             "message": "Demo reset completed successfully",
@@ -60,7 +65,8 @@ def reset_demo(
             },
             "preserved": {
                 "users": db.query(models.User).count()
-            }
+            },
+            "note": memory_note
         }
     except Exception as e:
         db.rollback()

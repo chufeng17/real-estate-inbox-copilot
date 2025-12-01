@@ -79,6 +79,8 @@ class Task(TaskBase):
     created_at: datetime
     completed_at: Optional[datetime] = None
     overdue: bool = False # Computed field
+    contact_name: Optional[str] = None  # NEW: For UI display
+    contact_email: Optional[str] = None  # NEW: For UI display
 
     class Config:
         from_attributes = True

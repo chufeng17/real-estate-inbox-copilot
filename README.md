@@ -2,6 +2,8 @@
 
 A multi-agent AI system to help real estate agents manage their inbox, leads, and tasks. Built for the Kaggle Agentic Coding Capstone.
 
+> **This repository contains my submission for the Google Agents Intensive Capstone Project.**
+
 ## Architecture
 - **Backend**: FastAPI (Python)
 - **Frontend**: Next.js (TypeScript)

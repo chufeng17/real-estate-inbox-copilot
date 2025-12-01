@@ -31,3 +31,10 @@ npm-debug.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# Logs and Debug
+adk_output.txt
+debug_*.py
+verify_*.py
+inspect_*.py
+test_tools.py
